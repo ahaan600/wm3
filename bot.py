@@ -40,7 +40,7 @@ async def HelpWatermark(bot, cmd):
 	await cmd.reply_text(
 		text=Config.USAGE_WATERMARK_ADDER,
 		parse_mode="Markdown",
-		reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💻 مدیر و سازنده ربات", url="https://t.me/FarshidBand"), InlineKeyboardButton("🔮 گروه پشتیبانی", url="https://t.me/dlchinhub")], [InlineKeyboardButton("🔮 کانال پشتیبانی", url="https://t.me/SeriesPlus1")], [InlineKeyboardButton("📍 اینستاگرام", url="https://instagram.com/Series.Plus1")]]),
+		reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💻 مدیر و سازنده ربات", url="https://t.me/FarshidBand")], [InlineKeyboardButton("🔮 گروه پشتیبانی", url="https://t.me/dlchinhub"), InlineKeyboardButton("🔮 کانال پشتیبانی", url="https://t.me/SeriesPlus1")]]),
 		disable_web_page_preview=True
 	)
 
@@ -153,7 +153,7 @@ async def VidWatermarkAdder(bot, cmd):
 			file_name=watermark_path,
 		)
 		await editable.delete()
-		await cmd.reply_text("✅ واترمارک با موفقیت ذخیره شد 😍!\n\n**🔚 اکنون ویدیوی جهت افزودن واترمارک به آن ارسال نمایید**")
+		await cmd.reply_text("**✅ واترمارک با موفقیت ذخیره شد 😍**\n\n**🔚 اکنون ویدیوی جهت افزودن واترمارک به آن ارسال نمایید**")
 		return
 	else:
 		pass
@@ -402,14 +402,14 @@ async def button(bot, cmd: CallbackQuery):
 					return
 			except UserNotParticipant:
 				await cmd.message.edit(
-					text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+					text="**❌ شما در کانال عضو نشدید !!**\n\n**• برای کارکردن ربات در کانال زیر عضو شوید.**\n\n**🔚 سپس /start را کلیک کنید.😊👇👇**",
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
-								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+								InlineKeyboardButton("🌸 عضویت 🌸", url=invite_link.invite_link)
 							],
 							[
-								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
+								InlineKeyboardButton("🔄 تلاش دوباره", callback_data="refreshmeh")
 							]
 						]
 					),
@@ -426,7 +426,7 @@ async def button(bot, cmd: CallbackQuery):
 		await cmd.message.edit(
 			text=Config.USAGE_WATERMARK_ADDER,
 			parse_mode="Markdown",
-			reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💻 مدیر و سازنده ربات", url="https://t.me/FarshidBand"), InlineKeyboardButton("🔮 گروه پشتیبانی", url="https://t.me/dlchinhub")], [InlineKeyboardButton("🔮 کانال پشتیبانی", url="https://t.me/SeriesPlus1")]]),
+			reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💻 مدیر و سازنده ربات", url="https://t.me/FarshidBand")], [InlineKeyboardButton("🔮 گروه پشتیبانی", url="https://t.me/dlchinhub"), InlineKeyboardButton("🔮 کانال پشتیبانی", url="https://t.me/SeriesPlus1")]]),
 			disable_web_page_preview=True
 		)
 
@@ -450,14 +450,14 @@ async def button(bot, cmd: CallbackQuery):
 					return
 			except UserNotParticipant:
 				await cmd.message.edit(
-					text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+					text="**❌ شما در کانال عضو نشدید !!**\n\n**• برای کارکردن ربات در کانال زیر عضو شوید.**\n\n**🔚 سپس /start را کلیک کنید.😊👇👇**",
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
-								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+								InlineKeyboardButton("🌸 عضویت 🌸", url=invite_link.invite_link)
 							],
 							[
-								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
+								InlineKeyboardButton("🔄 تلاش دوباره", callback_data="refreshmeh")
 							]
 						]
 					),
