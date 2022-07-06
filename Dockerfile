@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt /app/
 
-RUN pip3 install -r requirements.txt apt -qq update && apt -qq install -y git ffmpeg
+RUN pip3 install -r requirements.txt
 
 COPY . /app
 
